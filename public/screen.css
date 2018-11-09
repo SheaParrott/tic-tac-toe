@@ -1,9 +1,203 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+h1 {
+  text-align: center;
+  font-size: 10vw;
+  padding: 5vw;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 1));
+}
+h2 {
+  text-align: center;
+  font-size: 5vw;
+}
+section {
+  margin-top: 2vw;
+  display: flex;
+  justify-content: center;
+}
+.chooseXButton {
+  font-size: 5vw;
+  width: 20vw;
+  border-radius: 1vw;
+}
+.chooseOButton {
+  font-size: 5vw;
+  width: 20vw;
+  border-radius: 1vw;
+}
+.resetButton {
+  border-radius: 1vw;
+  font-size: 5vw;
+}
 html {
   height: 100%;
 }
-
 body {
   margin: 0;
   min-height: 100%;
   font: 16px / 1 sans-serif;
+}
+main {
+  display: flex;
+  width: 90vw;
+  height: 90vw;
+  margin: 5%;
+}
+p {
+  background-color: lightgrey;
+  width: 30vw;
+  height: 30vw;
+}
+.space0Button,
+.space1Button,
+.space2Button,
+.space3Button,
+.space4Button,
+.space5Button,
+.space6Button,
+.space7Button,
+.space8Button {
+  background-color: lightgrey;
+  width: 29.5vw;
+  height: 29.5vw;
+}
+.space0 {
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+}
+.space1 {
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+}
+.space2 {
+  border-bottom: 1px solid black;
+}
+.space3 {
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+}
+.space4 {
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+}
+.space5 {
+  border-bottom: 1px solid black;
+}
+.space6 {
+  border-right: 1px solid black;
+}
+.space7 {
+  border-right: 1px solid black;
+}
+footer {
+  font-size: 3vw;
+  text-align: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 1vw;
+  background-color: lightgrey;
+  color: white;
+  text-shadow: 0 0 0.5vw black;
+}
+.hidden {
+  display: none;
+}
+.Visability {
+  visibility: hidden;
+}
+.addX {
+  background-image: url(./assets/x.jpg);
+  background-size: 30vw;
+}
+.add0 {
+  background-image: url(./assets/o.jpg);
+  background-size: 30vw;
 }
