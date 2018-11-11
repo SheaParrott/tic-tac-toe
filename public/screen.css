@@ -114,6 +114,8 @@ section {
 .resetButton {
   border-radius: 1vw;
   font-size: 5vw;
+  padding: 0 4vw 0 4vw;
+  margin: 0 1vw 0 1vw;
 }
 html {
   height: 100%;
