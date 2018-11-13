@@ -48,53 +48,38 @@
 //
 // - need H2 to display whos turn it is as well as a winner (nov 10)
 // - need a declare winner function (player X wins, player O wins, TIE) (nov 10)
+// - remove check arrays button before final launch (nov 12)
+// - added images and better styling (nov 12)
 //
 //
 //        TO DO BELOW
 //
-//    - add removed space buttons after winner declared
-//      - remove all button function
-//    - how to make use of filter in whowon function?
 //
 //    CHALLENGES - OPTIONAL (after game works perfectly)
 //
 // - have array number spliced added to array, currently set up as
 //    splicing off. new number created and pushed to player array
-// - has a X and O button for player to choose
-//    - currently set up for player one to be X
-//    - hide X O choices when clicked
-//
-//
+// - add removed space buttons after winner declared (attempted, but couldnt achieve)
+// - how to make use of .filter in whowon function?
 //
 //      CLEANUP CODE
-// - repeated behavior added into a function then call function
-// - remove check arrays button before final launch
+// - repeated behavior add into a function then call function
+//
 //
 //
 
 let playerXSpaces = []
 let playerOSpaces = []
 let unplayedSpaces = [0, 1, 2, 3, 4, 5, 6, 7, 8]
-let playerOneLetter = ''
-let playertwoLetter = ''
-
-// let chooseXButton = () => {
-// }
-// let chooseOButton = () => {
-// }
 
 let resetButton = () => {
   window.location.reload(true)
 }
-let checkArrays = () => {
-  console.log(unplayedSpaces)
-  console.log(playerXSpaces)
-  console.log(playerOSpaces)
-}
 
 let testForAllSpacesFilled = () => {
   if (unplayedSpaces.length === 0) {
-    document.querySelector('h2').textContent = 'TIE, play again?'
+    document.querySelector('h3').textContent = 'TIE, PLAY AGAIN?'
+    document.querySelector('h2').classList.add('hidden')
   }
 }
 let whoWon = () => {
@@ -124,7 +109,9 @@ let whoWon = () => {
       playerOSpaces.includes(4) &&
       playerOSpaces.includes(8))
   ) {
-    document.querySelector('h2').textContent = 'Player O wins! Play again?'
+    console.log('testingOwin')
+    document.querySelector('h3').textContent = 'PLAYER O WINS! PLAY AGAIN?'
+    document.querySelector('h2').classList.add('hidden')
   }
   if (
     (playerXSpaces.includes(0) &&
@@ -152,9 +139,16 @@ let whoWon = () => {
       playerXSpaces.includes(4) &&
       playerXSpaces.includes(8))
   ) {
-    document.querySelector('h2').textContent = 'Player X wins! Play again?'
+    document.querySelector('h3').textContent = 'PLAYER X WINS! PLAY AGAIN?'
+    document.querySelector('h2').classList.add('hidden')
   }
   testForAllSpacesFilled()
+}
+let playerOturnNext = () => {
+  document.querySelector('h2').textContent = 'PLAYER O TURN'
+}
+let playerXturnNext = () => {
+  document.querySelector('h2').textContent = 'PLAYER X TURN'
 }
 // splice removes from array
 // code below removes one object in the [0] spot on all numbers buttons
@@ -165,11 +159,13 @@ let space0Button = () => {
     document.querySelector('.space0Button').classList.add('hidden')
     document.querySelector('.space0').classList.add('addX')
     whoWon()
+    playerOturnNext()
   } else {
     playerOSpaces.push(0)
     document.querySelector('.space0Button').classList.add('hidden')
     document.querySelector('.space0').classList.add('add0')
     whoWon()
+    playerXturnNext()
   }
 }
 let space1Button = () => {
@@ -179,11 +175,13 @@ let space1Button = () => {
     document.querySelector('.space1Button').classList.add('hidden')
     document.querySelector('.space1').classList.add('addX')
     whoWon()
+    playerOturnNext()
   } else {
     playerOSpaces.push(1)
     document.querySelector('.space1Button').classList.add('hidden')
     document.querySelector('.space1').classList.add('add0')
     whoWon()
+    playerXturnNext()
   }
 }
 let space2Button = () => {
@@ -193,11 +191,13 @@ let space2Button = () => {
     document.querySelector('.space2Button').classList.add('hidden')
     document.querySelector('.space2').classList.add('addX')
     whoWon()
+    playerOturnNext()
   } else {
     playerOSpaces.push(2)
     document.querySelector('.space2Button').classList.add('hidden')
     document.querySelector('.space2').classList.add('add0')
     whoWon()
+    playerXturnNext()
   }
 }
 let space3Button = () => {
@@ -207,11 +207,13 @@ let space3Button = () => {
     document.querySelector('.space3Button').classList.add('hidden')
     document.querySelector('.space3').classList.add('addX')
     whoWon()
+    playerOturnNext()
   } else {
     playerOSpaces.push(3)
     document.querySelector('.space3Button').classList.add('hidden')
     document.querySelector('.space3').classList.add('add0')
     whoWon()
+    playerXturnNext()
   }
 }
 let space4Button = () => {
@@ -221,11 +223,13 @@ let space4Button = () => {
     document.querySelector('.space4Button').classList.add('hidden')
     document.querySelector('.space4').classList.add('addX')
     whoWon()
+    playerOturnNext()
   } else {
     playerOSpaces.push(4)
     document.querySelector('.space4Button').classList.add('hidden')
     document.querySelector('.space4').classList.add('add0')
     whoWon()
+    playerXturnNext()
   }
 }
 let space5Button = () => {
@@ -235,11 +239,13 @@ let space5Button = () => {
     document.querySelector('.space5Button').classList.add('hidden')
     document.querySelector('.space5').classList.add('addX')
     whoWon()
+    playerOturnNext()
   } else {
     playerOSpaces.push(5)
     document.querySelector('.space5Button').classList.add('hidden')
     document.querySelector('.space5').classList.add('add0')
     whoWon()
+    playerXturnNext()
   }
 }
 
@@ -250,11 +256,13 @@ let space6Button = () => {
     document.querySelector('.space6Button').classList.add('hidden')
     document.querySelector('.space6').classList.add('addX')
     whoWon()
+    playerOturnNext()
   } else {
     playerOSpaces.push(6)
     document.querySelector('.space6Button').classList.add('hidden')
     document.querySelector('.space6').classList.add('add0')
     whoWon()
+    playerXturnNext()
   }
 }
 
@@ -265,11 +273,13 @@ let space7Button = () => {
     document.querySelector('.space7Button').classList.add('hidden')
     document.querySelector('.space7').classList.add('addX')
     whoWon()
+    playerOturnNext()
   } else {
     playerOSpaces.push(7)
     document.querySelector('.space7Button').classList.add('hidden')
     document.querySelector('.space7').classList.add('add0')
     whoWon()
+    playerXturnNext()
   }
 }
 
@@ -280,17 +290,18 @@ let space8Button = () => {
     document.querySelector('.space8Button').classList.add('hidden')
     document.querySelector('.space8').classList.add('addX')
     whoWon()
+    playerOturnNext()
   } else {
-    playerOSpaces.push(1)
+    playerOSpaces.push(8)
     document.querySelector('.space8Button').classList.add('hidden')
     document.querySelector('.space8').classList.add('add0')
     whoWon()
+    playerXturnNext()
   }
 }
 
 const main = () => {
   document.querySelector('.resetButton').addEventListener('click', resetButton)
-  document.querySelector('.checkArrays').addEventListener('click', checkArrays)
   document
     .querySelector('.space0Button')
     .addEventListener('click', space0Button)
@@ -324,12 +335,6 @@ const main = () => {
   document
     .querySelector('.space8Button')
     .addEventListener('click', space8Button)
-
-  // .querySelector('.chooseXButton')
-  // .addEventListener('click', chooseXButton)
-  // document
-  //   .querySelector('.chooseOButton')
-  //   .addEventListener('click', chooseOButton)
 }
 
 document.addEventListener('DOMContentLoaded', main)
