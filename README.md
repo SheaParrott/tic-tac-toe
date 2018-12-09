@@ -3,6 +3,7 @@ In this assignment we were instructed to create a tic tac toe game between two p
 
 <strong>Things learned</strong><br/>
 expanded and reinforced my knowledge into CSS<br/>
+ - leanred how useful using vw (view width) can be for sizing<br/>
 expanded and reinforced my knowledge in javascript<br/>
 how to make turn by turn logic<br/>
 
