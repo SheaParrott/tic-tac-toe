@@ -3,7 +3,7 @@ In this assignment we were instructed to create a tic tac toe game between two p
 
 <strong>Things learned</strong><br/>
 expanded and reinforced my knowledge into CSS<br/>
-expanded my knowledge in javascript<br/>
+expanded and reinforced my knowledge in javascript<br/>
 how to make turn by turn logic<br/>
 
 <strong>Technologies Used</strong><br/>
