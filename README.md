@@ -7,7 +7,7 @@ how to make turn by turn logic<br/>
 expanded and reinforced my knowledge into CSS<br/>
  - leanred how useful using vw (view width) can be for sizing<br/>
  
-
+<br/>
 <strong>Technologies Used</strong><br/>
 HTML<br/>
 CSS<br/>
